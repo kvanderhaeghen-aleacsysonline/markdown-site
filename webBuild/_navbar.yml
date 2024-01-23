@@ -1,21 +1,23 @@
-name: "Mywebsite"
-title: "My new website"
+name: "Dragon-Dice"
+title: "Dragon Dice"
 type: inverse
 left:
-  - text: "About me"
+  - text: "Design Document"
     menu:
-      - text: "Learn more about me"
-        href: ./aboutme.html
-  - text: "Project"
-    menu:
-       - text: "Project part 1"
-         href: ./project1.html
-       - text: "Project part 2"
-         href: ./project2.html
-  - text: "Contact"
-    href: ./contact.html
+       - text: "Gameplay"
+         href: ./gameplay.html
+       - text: "Game Logic"
+         href: ./gamelogic.html
+  #- text: "Project"
+  #  menu:
+  #     - text: "Project part 1"
+  #       href: ./project1.html
+  #     - text: "Project part 2"
+  #       href: ./project2.html
+  #- text: "Contact"
+  #  href: ./contact.html
   - text: "Jelle's Test"
     href: ./jelle-test/index.html
 right:
-  - icon: fa-github fa-lg
-    href: https://kvanderhaeghen-aleacsysonline.github.io/markdown-site
+  - icon: fa fa-gamepad
+    href: https://napoleondice.be/en-be/game/dragon-dice?demo=false

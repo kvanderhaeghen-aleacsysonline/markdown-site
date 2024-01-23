@@ -1,27 +1,26 @@
 ---
-title: "My website"
-output: 
-  html_document:
-    toc: FALSE
+output: html_document
 ---
 
+![](images/dragon-dice-html5.png) </br>
 
+# Game Description
 
+This game is a 4 grid placement game in the Dragon Rolls theme. </br></br>
 
-**Welcome to my website!**
+# Game Type
 
+Placement Game </br></br>
 
-# Getting started
+# Target Audience
 
-Click the links in the menu above to look around.
+-   Reel players
+-   Fans of dragon rolls branding
+-   Dice players </br></br>
 
+# Features & Selling Points
 
-# Notes
-
-This website is a collection of regular (R)Markdown document, so you can use all the usual formatting.
-
-If you are new to R Markdown, you can learn more about it [on the R Markdown website](https://rmarkdown.rstudio.com/). 
-
-I also have a discussion of R Markdown and reproducibility [on one of my course pages](https://andreashandel.github.io/MADAcourse/1e_ToolsforReproducibility.html). You'll find additional links to potentially useful R Markdown (and Github) resources there.
-
-
+``` {r echo=FALSE, result='asis'}
+source("functions.R")
+createCsvTable('./tables/features.csv')
+```
