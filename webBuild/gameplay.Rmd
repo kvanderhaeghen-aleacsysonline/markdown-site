@@ -1,8 +1,10 @@
 ---
+title: "Gameplay"
 output: html_document
 ---
+</br>
 
-# Gameplay
+## Explanation
 
 It is an extension of the Dragon Rolls brand.
 
