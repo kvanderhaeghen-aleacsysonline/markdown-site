@@ -1,5 +1,5 @@
 name: "Dragon-Dice"
-title: "Dragon Dice"
+title: "<div style=\"display: flex; justify-content: center;\"><img src=\"images/aleacsys.png\" alt=\"Icon\" style=\"height: 24px; margin-right: 8px;\">Dragon Dice</div>"
 type: inverse
 left:
   - text: "Design Document"

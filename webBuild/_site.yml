@@ -7,3 +7,6 @@ output:
     toc_collapsed: true
     toc_depth: 3
     theme: lumen
+    includes:
+      after_body: "footer.html"
+      

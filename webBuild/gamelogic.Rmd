@@ -4,46 +4,46 @@ output: html_document
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
-library(knitr)
 ```
 </br>
 
 ## Dice String
 
-<aside class="alert alert-info">
-Please note that the dice strings don't make the loop yet.
-</aside>
-
-```{r echo=FALSE, results='asis'}
+```{r child = './data/gamelogic-dicestr.md'}
+```
+```{r, results='asis'}
 source("functions.R")
-printJson('./data/dicestring.txt')
+printJson('./data/gamelogic-dicestr.json')
 ```
 </br></br>
 
-## Reel Table [Free Spins]
+## Reel String [Free Spins]
 
-<aside class="alert alert-info">
-Please note that the dice strings don't make the loop yet.<br>
-Brake zone is the same as normal Zone.
-</aside>
-
-```{r echo=FALSE, results='asis'}
+```{r child = './data/gamelogic-reelstr.md'}
+```
+```{r, results='asis'}
 source("functions.R")
-printJson('./data/reeltable.txt')
+printJson('./data/gamelogic-reelstr.json')
 ```
 </br></br>
 
 <div style="display: flex; justify-content: space-between;">
-  <div style="flex: 1;">
-``` {r echo=FALSE, result='asis'}
+  <div style="flex: 1;text-align: center;">## Points Table
+```{r, result='asis'}
 source("functions.R")
-createCsvTableTwo('./tables/pointstable.csv')
+createCsvTable('./data/gamelogic-pointstbl.csv')
 ```
   </div>
-  <div style="flex: 1;">
-    This is the content of the second column.
+  <div style="flex: 1;text-align: center;">## Prize Table
+```{r, result='asis'}
+source("functions.R")
+createCsvTable('./data/gamelogic-prizetbl.csv')
+```
   </div>
-  <div style="flex: 1;">
-    This is the content of the third column.
+  <div style="flex: 1;text-align: center;">## Features
+```{r, result='asis'}
+source("functions.R")
+createCsvTable('./data/gamelogic-feattbl.csv')
+```
   </div>
 </div>

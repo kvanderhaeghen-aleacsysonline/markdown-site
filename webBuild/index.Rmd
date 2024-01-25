@@ -2,30 +2,34 @@
 output: html_document
 ---
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-library(knitr)
+knitr::opts_chunk$set(echo = FALSE) 
 ```
+</br>
 
-![](images/dragon-dice-html5.png)
+![](images/logo.png)
 </br></br>
 
 ## Game Description
 
-This game is a 4 grid placement game in the Dragon Rolls theme. </br></br>
+```{r child = './data/index-desc.md'}
+```
+</br></br>
 
 ## Game Type
 
-Placement Game </br></br>
+```{r child = './data/index-type.md'}
+```
+</br></br>
 
 ## Target Audience
 
--   Reel players
--   Fans of dragon rolls branding
--   Dice players </br></br>
+```{r child = './data/index-target.md'}
+```
+</br></br>
 
 ## Features & Selling Points
 
-``` {r echo=FALSE, result='asis'}
+``` {r, result='asis'}
 source("functions.R")
-createCsvTableTwo('./tables/features.csv')
+createCsvTable('./data/index-feat.csv')
 ```

@@ -318,7 +318,7 @@ div.tocify {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Dragon Dice</a>
+      <a class="navbar-brand" href="index.html"><div style="display: flex; justify-content: center;"><img src="images/aleacsys.png" alt="Icon" style="height: 24px; margin-right: 8px;">Dragon Dice</div></a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -366,67 +366,76 @@ div.tocify {
 <div id="dice-string" class="section level2">
 <h2>Dice String</h2>
 <aside class="alert alert-info">
-Please note that the dice strings don’t make the loop yet.
+Please note that the dice strings don’t make the loop yet.<br>
+</aside>
+<aside class="alert alert-warning">
+10 = Bonus symbol
 </aside>
 <pre><code>{
-    CompensatorZones.normal: [
+    &quot;CompensatorZones.normal&quot;: [
 6, 5, 9, 3, 8, 1, 3, 4, 1, 5, 7, 4, 2, 9, 4, 3, 5, 3, 4, 7, 2, 8, 1, 8, 5, 5, 5, 9, 7, 3, 2, 7, 5, 3, 1, 10, 3, 8, 3, 8, 4, 7, 1, 4, 2, 5, 1, 2, 2, 1, 4, 10, 2, 4, 1, 8, 6, 5, 3, 2, 3, 3, 3, 1, 8, 7, 2, 6, 10, 4, 4, 3, 3, 7, 2, 2, 2, 6, 4, 7, 3, 5, 7, 1, 9, 6, 6, 8, 1, 1, 1, 2, 6, 5, 2, 2, 2, 1, 3, 3, 10, 1, 6, 2, 1, 2, 3, 6, 5, 9, 3, 8, 9, 1, 3, 4, 1, 5, 7, 2, 9, 4, 3, 1, 5, 3, 4, 7, 2, 8, 1, 8, 5, 5, 5, 9, 7, 3, 2, 5, 2, 3, 1, 3, 1, 2, 1, 1, 10, 4, 3, 8, 3, 8, 4, 7, 1, 1, 4, 2, 5, 1, 1, 8, 2, 2, 4, 10, 2, 4, 1, 8, 6, 5, 3, 2, 3, 3, 3, 8, 1, 7, 2, 6, 10, 4, 4, 3, 3, 7, 2, 2, 2, 6, 4, 7, 3, 5, 7, 1, 9, 6, 6, 6, 8, 1, 1, 1, 2, 6, 5, 1, 10, 3, 3, 1, 6, 1, 2, 1, 2, 3
     ],
-    CompensatorZones.boost: [
+    &quot;CompensatorZones.boost&quot;: [
 6, 5, 9, 3, 8, 1, 3, 4, 1, 5, 7, 4, 2, 9, 4, 3, 5, 3, 4, 7, 2, 8, 1, 8, 5, 5, 5, 9, 7, 3, 2, 7, 5, 3, 1, 10, 3, 8, 3, 8, 4, 7, 1, 4, 2, 5, 1, 2, 2, 1, 4, 10, 2, 4, 1, 8, 6, 5, 3, 2, 3, 3, 3, 1, 8, 7, 2, 6, 10, 4, 4, 3, 3, 7, 2, 2, 2, 6, 4, 7, 3, 5, 7, 1, 9, 6, 6, 8, 1, 1, 1, 2, 6, 5, 2, 2, 2, 1, 3, 3, 10, 1, 6, 2, 1, 2, 3, 6, 5, 9, 3, 8, 9, 1, 3, 4, 1, 5, 7, 2, 9, 4, 3, 1, 5, 3, 4, 7, 2, 8, 1, 8, 5, 5, 5, 9, 7, 3, 2, 5, 2, 3, 1, 3, 1, 2, 1, 1, 10, 4, 3, 8, 3, 8, 4, 7, 1, 1, 4, 2, 5, 1, 1, 8, 2, 2, 4, 10, 2, 4, 1, 8, 6, 5, 3, 2, 3, 3, 3, 8, 1, 7, 2, 6, 10, 4, 4, 3, 3, 7, 2, 2, 2, 6, 4, 7, 3, 5, 7, 1, 1, 2, 6, 10, 4, 3, 8, 9, 1, 3, 4, 7, 1, 4, 2, 5, 1, 10, 3, 3, 1, 2, 3
     ],
-    CompensatorZones.brake: [
+    &quot;CompensatorZones.brake&quot;: [
 6, 5, 9, 3, 8, 1, 3, 4, 1, 5, 7, 4, 2, 9, 4, 3, 5, 3, 4, 7, 2, 8, 1, 8, 5, 5, 5, 9, 7, 3, 2, 7, 5, 3, 1, 10, 3, 8, 3, 8, 4, 7, 1, 4, 2, 5, 1, 2, 2, 1, 4, 10, 2, 4, 1, 8, 6, 5, 3, 2, 3, 3, 3, 1, 8, 7, 2, 6, 10, 4, 4, 3, 3, 7, 2, 2, 2, 6, 4, 7, 3, 5, 7, 1, 9, 6, 6, 8, 1, 1, 1, 2, 6, 5, 2, 2, 2, 1, 3, 3, 10, 1, 6, 2, 1, 2, 3, 6, 5, 9, 3, 8, 9, 1, 3, 4, 1, 5, 7, 2, 9, 4, 3, 1, 5, 3, 4, 7, 2, 8, 1, 8, 5, 5, 5, 9, 7, 3, 2, 5, 2, 3, 1, 3, 1, 2, 1, 1, 10, 4, 3, 8, 3, 8, 4, 7, 1, 1, 4, 2, 5, 1, 1, 8, 2, 2, 4, 10, 2, 4, 1, 8, 6, 5, 3, 2, 3, 3, 3, 8, 1, 7, 2, 6, 10, 4, 4, 3, 3, 7, 2, 2, 2, 6, 4, 7, 3, 5, 7, 1, 9, 6, 6, 6, 8, 1, 1, 1, 2, 6, 5, 1, 1, 4, 2, 5, 1, 2, 3
     ],
 }
 </code></pre>
 <p></br></br></p>
 </div>
-<div id="reel-table-free-spins" class="section level2">
-<h2>Reel Table [Free Spins]</h2>
+<div id="reel-string-free-spins" class="section level2">
+<h2>Reel String [Free Spins]</h2>
 <aside class="alert alert-info">
 Please note that the dice strings don’t make the loop yet.<br> Brake
 zone is the same as normal Zone.
 </aside>
+<aside class="alert alert-warning">
+11 = Blue bonus symbol | 12 = Green bonus symbol | 13 = Red bonus symbol
+</aside>
 <pre><code>{
-    CompensatorZones.normal: [
-1, 4, 6, symbol_green, 7, 2, 1, 1, 5, 8, 3, 5, 3, 5, 9, 4, 2, 1, symbol_blue, 3, 2, 4, 1, 3, 8, 6, 4, 1, 7, 1, 2, 9, symbol_green, 3, 4, symbol_red, 9, 2, symbol_blue, 3, 1, 4, 2, 3, symbol_blue, 2, 1, 8, 2, 6, 4, 2, 5, 3, 7, 2, 9, 3, 2, 6, 3, 6, 7, 4, 3, 1, 2, 1, symbol_red, 1, 5, 6, 9, 8, 4, 3, symbol_green, 7, 1, 1, 4, 2, 1, 3, 2, 4, 1, 2, 3, 3, 3, 1, 2, 1, 4
+    &quot;CompensatorZones.normal&quot;: [
+1, 4, 6, 12, 7, 2, 1, 1, 5, 8, 3, 5, 3, 5, 9, 4, 2, 1, 11, 3, 2, 4, 1, 3, 8, 6, 4, 1, 7, 1, 2, 9, 12, 3, 4, 13, 9, 2, 11, 3, 1, 4, 2, 3, 11, 2, 1, 8, 2, 6, 4, 2, 5, 3, 7, 2, 9, 3, 2, 6, 3, 6, 7, 4, 3, 1, 2, 1, 13, 1, 5, 6, 9, 8, 4, 3, 12, 7, 1, 1, 4, 2, 1, 3, 2, 4, 1, 2, 3, 3, 3, 1, 2, 1, 4
     ],
-    CompensatorZones.boost: [
-1, 4, 6, symbol_green, 7, 2, 1, 1, 5, 8, 3, 5, 3, 5, 9, 4, 2, 1, symbol_blue, 3, 2, 4, 1, 3, 8, 6, 4, 1, 7, 1, 2, 9, symbol_green, 3, 4,
-symbol_red, 9, 2, symbol_blue, 3, 2, 4, 1, 2, 3, 3, 3, 1, 2, 1, 4
+    &quot;CompensatorZones.boost&quot;: [
+1, 4, 6, 12, 7, 2, 1, 1, 5, 8, 3, 5, 3, 5, 9, 4, 2, 1, 11, 3, 2, 4, 1, 3, 8, 6, 4, 1, 7, 1, 2, 9, 12, 3, 4,
+13, 9, 2, 11, 3, 2, 4, 1, 2, 3, 3, 3, 1, 2, 1, 4
     ],    
-    CompensatorZones.brake: [
-1, 4, 6, symbol_green, 7, 2, 1, 1, 5, 8, 3, 5, 3, 5, 9, 4, 2, 1, symbol_blue, 3, 2, 4, 1, 3, 8, 6, 4, 1, 7, 1, 2, 9, symbol_green, 3, 4, symbol_red, 9, 2, symbol_blue, 3, 1, 4, 2, 3, symbol_blue, 2, 1, 8, 2, 6, 4, 2, 5, 3, 7, 2, 9, 3, 2, 6, 3, 6, 7, 4, 3, 1, 2, 1, symbol_red, 1, 5, 6, 9, 8, 4, 3, symbol_green, 7, 1, 1, 4, 2, 1, 3, 2, 4, 1, 2, 3, 3, 3, 1, 2, 1, 4
+    &quot;CompensatorZones.brake&quot;: [
+1, 4, 6, 12, 7, 2, 1, 1, 5, 8, 3, 5, 3, 5, 9, 4, 2, 1, 11, 3, 2, 4, 1, 3, 8, 6, 4, 1, 7, 1, 2, 9, 12, 3, 4, 13, 9, 2, 11, 3, 1, 4, 2, 3, 11, 2, 1, 8, 2, 6, 4, 2, 5, 3, 7, 2, 9, 3, 2, 6, 3, 6, 7, 4, 3, 1, 2, 1, 13, 1, 5, 6, 9, 8, 4, 3, 12, 7, 1, 1, 4, 2, 1, 3, 2, 4, 1, 2, 3, 3, 3, 1, 2, 1, 4
     ],
 }
 </code></pre>
 <p></br></br></p>
+</div>
 <div style="display: flex; justify-content: space-between;">
-<div style="flex: 1;">
+<div id="points-table" class="section level2"
+style="flex: 1;text-align: center;">
+<h2>Points Table</h2>
 <table class="table table-bordered" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
-<th style="text-align:left;">
-image
+<th style="text-align:left;color: white !important;background-color: #158CBA !important;">
+Image
 </th>
-<th style="text-align:left;">
-symbol
+<th style="text-align:right;color: white !important;background-color: #158CBA !important;">
+Symbol
 </th>
-<th style="text-align:right;">
-points
+<th style="text-align:right;color: white !important;background-color: #158CBA !important;">
+Points
 </th>
-<th style="text-align:left;">
-notes
+<th style="text-align:left;color: white !important;background-color: #158CBA !important;">
+Notes
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:left;">
-&lt;img src=“./images/die1.png”&gt;
+<img src="images/die1.png" />
 </td>
-<td style="text-align:left;">
+<td style="text-align:right;">
 1
 </td>
 <td style="text-align:right;">
@@ -437,8 +446,9 @@ notes
 </tr>
 <tr>
 <td style="text-align:left;">
+<img src="images/die2.png" />
 </td>
-<td style="text-align:left;">
+<td style="text-align:right;">
 2
 </td>
 <td style="text-align:right;">
@@ -449,8 +459,9 @@ notes
 </tr>
 <tr>
 <td style="text-align:left;">
+<img src="images/die3.png" />
 </td>
-<td style="text-align:left;">
+<td style="text-align:right;">
 3
 </td>
 <td style="text-align:right;">
@@ -461,8 +472,9 @@ notes
 </tr>
 <tr>
 <td style="text-align:left;">
+<img src="images/die4.png" />
 </td>
-<td style="text-align:left;">
+<td style="text-align:right;">
 4
 </td>
 <td style="text-align:right;">
@@ -473,8 +485,9 @@ notes
 </tr>
 <tr>
 <td style="text-align:left;">
+<img src="images/die5.png" />
 </td>
-<td style="text-align:left;">
+<td style="text-align:right;">
 5
 </td>
 <td style="text-align:right;">
@@ -485,8 +498,9 @@ notes
 </tr>
 <tr>
 <td style="text-align:left;">
+<img src="images/die6.png" />
 </td>
-<td style="text-align:left;">
+<td style="text-align:right;">
 6
 </td>
 <td style="text-align:right;">
@@ -497,8 +511,9 @@ notes
 </tr>
 <tr>
 <td style="text-align:left;">
+<img src="images/die7.png" />
 </td>
-<td style="text-align:left;">
+<td style="text-align:right;">
 7
 </td>
 <td style="text-align:right;">
@@ -509,8 +524,9 @@ notes
 </tr>
 <tr>
 <td style="text-align:left;">
+<img src="images/die8.png" />
 </td>
-<td style="text-align:left;">
+<td style="text-align:right;">
 8
 </td>
 <td style="text-align:right;">
@@ -521,8 +537,9 @@ notes
 </tr>
 <tr>
 <td style="text-align:left;">
+<img src="images/die9.png" />
 </td>
-<td style="text-align:left;">
+<td style="text-align:right;">
 9
 </td>
 <td style="text-align:right;">
@@ -533,67 +550,254 @@ notes
 </tr>
 <tr>
 <td style="text-align:left;">
+<img src="images/die10.png" />
 </td>
-<td style="text-align:left;">
-10 (bonus symbol)
+<td style="text-align:right;">
+10
 </td>
 <td style="text-align:right;">
 0
 </td>
 <td style="text-align:left;">
+Only appears in dice string
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
+<img src="images/die11.png" />
 </td>
-<td style="text-align:left;">
-11 (blue symbol)
+<td style="text-align:right;">
+11
 </td>
 <td style="text-align:right;">
 0
 </td>
 <td style="text-align:left;">
-only appears in reel table
+Only appears in reel string
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
+<img src="images/die12.png" />
 </td>
-<td style="text-align:left;">
-12 (green symbol)
+<td style="text-align:right;">
+12
 </td>
 <td style="text-align:right;">
 0
 </td>
 <td style="text-align:left;">
-only appears in reel table
+Only appears in reel string
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
+<img src="images/die13.png" />
 </td>
-<td style="text-align:left;">
-13 (red symbol)
+<td style="text-align:right;">
+13
 </td>
 <td style="text-align:right;">
 0
 </td>
 <td style="text-align:left;">
-only appears in reel table
+Only appears in reel string
 </td>
 </tr>
 </tbody>
 </table>
 </div>
-<div style="flex: 1;">
-<pre><code>This is the content of the second column.</code></pre>
+<div id="prize-table" class="section level2"
+style="flex: 1;text-align: center;">
+<h2>Prize Table</h2>
+<table class="table table-bordered" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:right;color: white !important;background-color: #158CBA !important;">
+Points
+</th>
+<th style="text-align:right;color: white !important;background-color: #158CBA !important;">
+Stake Multiplier
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+100
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+150
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+200
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+300
+</td>
+<td style="text-align:right;">
+7
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+400
+</td>
+<td style="text-align:right;">
+12
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+500
+</td>
+<td style="text-align:right;">
+20
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+750
+</td>
+<td style="text-align:right;">
+50
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1000
+</td>
+<td style="text-align:right;">
+100
+</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div style="flex: 1;">
-<pre><code>This is the content of the third column.</code></pre>
-</div>
+<div id="features" class="section level2"
+style="flex: 1;text-align: center;">
+<h2>Features</h2>
+<table class="table table-bordered" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;color: white !important;background-color: #158CBA !important;">
+Feature
+</th>
+<th style="text-align:left;color: white !important;background-color: #158CBA !important;">
+Modifier
+</th>
+<th style="text-align:left;color: white !important;background-color: #158CBA !important;">
+Mode
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Points in 3 grids
+</td>
+<td style="text-align:left;">
+Total points x 1.5
+</td>
+<td style="text-align:left;">
+Base Game
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Points in 4 grids
+</td>
+<td style="text-align:left;">
+Total points x 2
+</td>
+<td style="text-align:left;">
+Base Game
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+All Alike in a grids
+</td>
+<td style="text-align:left;">
+Grid points + 200
+</td>
+<td style="text-align:left;">
+Base Game
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #158CBA !important;">
+</td>
+<td style="text-align:left;background-color: #158CBA !important;">
+</td>
+<td style="text-align:left;background-color: #158CBA !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Blue free spin
+</td>
+<td style="text-align:left;">
+Total points x 1.5
+</td>
+<td style="text-align:left;">
+Free Spin
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Green free spin
+</td>
+<td style="text-align:left;">
+Total points x 2
+</td>
+<td style="text-align:left;">
+Free Spin
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Red free spin
+</td>
+<td style="text-align:left;">
+Total points x 3
+</td>
+<td style="text-align:left;">
+Free Spin
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 
+<br><br><br>
+<div style="text-align: center; padding: 10px; background-color: #f2f2f2;">
+  <img src="images/aleacsys-online.png" alt="Icon" style="height: 50px;">
+</div>
 
 
 </div>
