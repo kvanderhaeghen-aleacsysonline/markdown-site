@@ -33,6 +33,13 @@ jobs:
           pandoc-version: '3.1.1'
       - name: Setup Renv
         uses: r-lib/actions/setup-renv@v2
+      - name: Install packages
+        run: |
+          install.packages("data.table")
+          install.packages("knitr")
+          install.packages("kableExtra")
+          install.packages("jsonlite")
+        shell: Rscript {0}
       - name: Render Site
         run: Rscript -e 'rmarkdown::render_site(input = "webBuild", output_format = "all", envir = parent.frame(), quiet = FALSE, encoding = "UTF-8")'
       - name: Commit results
