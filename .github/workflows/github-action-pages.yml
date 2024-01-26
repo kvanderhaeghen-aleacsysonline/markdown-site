@@ -21,6 +21,8 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+#    permissions:
+#      contents: write
     steps:
       - uses: actions/checkout@v4
       - name: Setup R
@@ -40,11 +42,10 @@ jobs:
         shell: Rscript {0}
       - name: Render Site
         run: Rscript -e 'rmarkdown::render_site(input = "webBuild", output_format = "all", envir = parent.frame(), quiet = FALSE, encoding = "UTF-8")'
-      - name: Commit results
-        run: |
-          git add -A
-          git commit -m 'Rebuild site' || echo "No changes to commit"
-          git push origin || echo "No changes to commit"
+#      - name: Commit results
+#        uses: stefanzweifel/git-auto-commit-action@v5
+#        with:
+#          commit_message: Pushing build webpages for Github Pages
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4

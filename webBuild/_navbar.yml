@@ -1,5 +1,5 @@
 name: "Dragon-Dice"
-title: "<div style=\"display: flex; justify-content: center;\"><img src=\"images/aleacsys.png\" alt=\"Icon\" style=\"height: 24px; margin-right: 8px;\">Dragon Dice</div>"
+title: "<div style=\"display: flex;\"><img src=\"images/aleacsys-online.png\" alt=\"Image\" style=\"height: 25px; margin-right: 75px;\"><img src=\"images/logo.png\" alt=\"Image\" style=\"height: 40px; margin-top: -10px;\"></div>"
 type: inverse
 left:
   - text: "Design Document"
@@ -8,14 +8,6 @@ left:
          href: ./gameplay.html
        - text: "Game Logic"
          href: ./gamelogic.html
-  #- text: "Project"
-  #  menu:
-  #     - text: "Project part 1"
-  #       href: ./project1.html
-  #     - text: "Project part 2"
-  #       href: ./project2.html
-  #- text: "Contact"
-  #  href: ./contact.html
   - text: "Jelle's Test"
     href: ./jelle-test/index.html
 right:
