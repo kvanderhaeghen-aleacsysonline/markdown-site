@@ -32,7 +32,7 @@ jobs:
       - name: Install packages
         run: Rscript -e 'install.packages("rmarkdown")'
       - name: Render Site
-        run: Rscript -e 'rmarkdown::render_site(input = "webBuild", output_format = "all" envir = parent.frame(), quiet = FALSE, encoding = "UTF-8")'
+        run: Rscript -e 'rmarkdown::render_site(input = "webBuild", output_format = "all", envir = parent.frame(), quiet = FALSE, encoding = "UTF-8")'
       - name: Commit results
         run: |
           git config --local user.email "actions@github.com"
