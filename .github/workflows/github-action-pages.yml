@@ -42,8 +42,6 @@ jobs:
         run: Rscript -e 'rmarkdown::render_site(input = "webBuild", output_format = "all", envir = parent.frame(), quiet = FALSE, encoding = "UTF-8")'
       - name: Commit results
         run: |
-          git config --local user.email "actions@github.com"
-          git config --local user.name "GitHub Actions"
           git add -A
           git commit -m 'Rebuild site' || echo "No changes to commit"
           git push origin || echo "No changes to commit"
