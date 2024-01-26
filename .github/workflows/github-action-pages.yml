@@ -1,9 +1,11 @@
+name: Render & Deploy Site
+
 on:
   push:
     branches:
       - master
       - main
-name: Render & Deploy Site
+
 jobs:
   build:
     runs-on: ubuntu-latest
