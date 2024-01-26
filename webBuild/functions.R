@@ -34,3 +34,15 @@ printJson <- function(path) {
   json_content <- toJSON(file_content, pretty = TRUE)
   cat("```", file_content, "\n```", sep = "\n")
 }
+
+createGraph <- function(path, title_name, column_names, column_types,  x_value, y_value) { 
+  library(readr)
+  library(ggplot2)
+  
+  data <- read_csv(path, col_types = column_types)
+  ggplot(data, aes(x = 1:nrow(data), y = y_value)) +
+    geom_point() +
+    labs(title = title_name,
+         x = "Rounds",
+         y = "Compensator Value")
+}

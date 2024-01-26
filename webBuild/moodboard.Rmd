@@ -1,0 +1,13 @@
+---
+title: "Moodboard"
+output: html_document
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+</br>
+
+## Explanation
+
+```{r child = './data/gameplay-expl.md'}
+```

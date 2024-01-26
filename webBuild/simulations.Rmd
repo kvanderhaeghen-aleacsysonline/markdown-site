@@ -1,0 +1,50 @@
+---
+title: "Simulations"
+output: html_document
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+</br>
+
+## Compensator
+
+### Round Data - Stake €1
+```{r, results='asis'}
+source("functions.R")
+library(cols)
+col_names = c(
+  "",
+  "session_id",
+  "round_id",
+  "round_index",
+  "stake",
+  "running_rtp",
+  "totalWon",
+  "totalPoints",
+  "compensator_value",
+  "compensator_mode",
+  "freespin_color",
+  "freespin_round",
+  "freespin_chain_counter"
+)
+
+# use col_double(), col_logical() (boolean), col_logical() (string) or col_skip() (don't check)
+col_types = cols(
+  ...1 = col_double(),
+  session_id = col_double(),
+  round_id = col_double(),
+  round_index = col_logical(),
+  stake = col_double(),
+  running_rtp = col_double(),
+  totalWon = col_double(),
+  totalPoints = col_double(),
+  compensator_value = col_double(),
+  compensator_mode = col_character(),
+  freespin_color = col_logical(),
+  freespin_round = col_logical(),
+  freespin_chain_counter = col_double()
+)
+
+createGraph('./data/simulations-round-example.csv', 'Round Data Graph', col_names, col_types, row_number(), "compensator_value")
+```
