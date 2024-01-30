@@ -1,0 +1,15 @@
+---
+title: "Concept Art"
+output: html_document
+runtime: shiny
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+</br>
+
+## Gallery
+```{r, results='asis'}
+source("functions.R")
+createImageGalery('./images/conceptart')
+```

@@ -1,4 +1,4 @@
-,session_id,round_id,round_index,stake,running_rtp,totalWon,totalPoints,compensator_value,compensator_mode,freespin_color,freespin_round,freespin_chain_counter
+count,session_id,round_id,round_index,stake,running_rtp,totalWon,totalPoints,compensator_value,compensator_mode,freespin_color,freespin_round,freespin_chain_counter
 0,1,0,,100.0,0.0,0.0,20.0,96.0,normal,,False,0
 1,1,1,,100.0,0.0,0.0,60.0,192.0,normal,,False,0
 2,1,2,,100.0,0.0,0.0,60.0,288.0,normal,,False,0

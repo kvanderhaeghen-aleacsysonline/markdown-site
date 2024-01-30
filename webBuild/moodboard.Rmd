@@ -7,7 +7,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 </br>
 
-## Explanation
+## Gallery
 
 ```{r child = './data/gameplay-expl.md'}
 ```

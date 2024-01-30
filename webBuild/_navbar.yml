@@ -4,16 +4,16 @@ type: inverse
 left:
   - text: "Design Document"
     menu:
-       - text: "Gameplay"
-         href: ./gameplay.html
-       - text: "Moodboard"
-         href: ./moodboard.html
+      - text: "Gameplay"
+        href: ./gameplay.html
+      - text: "Concept Art"
+        href: ./conceptart.html
   - text: "Math"
     menu:
-       - text: "Game Logic"
-         href: ./gamelogic.html
-       - text: "Simulations"
-         href: ./simulations.html
+      - text: "Game Logic"
+        href: ./gamelogic.html
+      - text: "Simulations"
+        href: ./simulations.html
   - text: "Jelle's Test"
     href: ./jelle-test/index.html
 right:
