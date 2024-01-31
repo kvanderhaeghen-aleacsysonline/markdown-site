@@ -41,6 +41,8 @@ jobs:
           install.packages("jsonlite", dependencies=TRUE)
           install.packages("ggplot2", dependencies=TRUE)
           install.packages("shiny", dependencies=TRUE)
+          install.packages("listviewer", dependencies=TRUE)
+          install.packages("reactR", dependencies=TRUE)
         shell: Rscript {0}
       - name: Render Site
         run: Rscript -e 'rmarkdown::render_site(input = "webBuild", output_format = "all", envir = parent.frame(), quiet = FALSE, encoding = "UTF-8")'

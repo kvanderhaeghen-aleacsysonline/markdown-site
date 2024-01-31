@@ -12,6 +12,8 @@ left:
     menu:
       - text: "Game Logic"
         href: ./gamelogic.html
+      - text: "KPIs"
+        href: ./kpi.html
       - text: "Simulations"
         href: ./simulations.html
   - text: "Jelle's Test"

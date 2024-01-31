@@ -1,6 +1,6 @@
 printTxt <- function(path) { 
   file_content = readLines(path)
-  cat( file_content, sep = "\n")
+  cat(file_content, sep = "\n")
 }
 
 createCsvTable <- function(path, display_rows = 100) { 
@@ -11,19 +11,19 @@ createCsvTable <- function(path, display_rows = 100) {
   table_color = "#158CBA"
   
   # Read CSV file
-  file_content <- fread(path, quote = "\"")
+  file_content <- data.table::fread(path, quote = "\"")
   
   # Create HTML table with kable
-  tbl <- kable(head(file_content, display_rows), format = "html")
+  tbl <- knitr::kable(head(file_content, display_rows), format = "html")
   
   # Identify rows with empty cells
   empty_rows <- apply(file_content, 1, function(row) all(row == "" | row == " "))
   
   # Apply styling to make the first row cells grey with white text
   tbl <- tbl %>%
-    kable_styling(bootstrap_options = "bordered", latex_options = "striped", full_width = FALSE) %>%
-    row_spec(0, background = table_color, color = "white") %>%
-    row_spec(which(empty_rows), background = table_color)
+    kableExtra::kable_styling(bootstrap_options = "bordered", latex_options = "striped", full_width = FALSE) %>%
+    kableExtra::row_spec(0, background = table_color, color = "white") %>%
+    kableExtra::row_spec(which(empty_rows), background = table_color)
   
   return(tbl)
 }
@@ -31,19 +31,58 @@ createCsvTable <- function(path, display_rows = 100) {
 printJson <- function(path) { 
   library(jsonlite)
   file_content <- readLines(path)
-  json_content <- toJSON(file_content, pretty = TRUE)
+  json_content <- jsonlite::toJSON(file_content, pretty = TRUE)
   cat("```", file_content, "\n```", sep = "\n")
+}
+
+getJsonData <- function(path, key_name) { 
+  library(jsonlite)
+  json_data <- jsonlite::fromJSON(path)
+  result <- ''
+  if (key_name %in% names(json_data)) {
+    # Extract and return the value of the specified object
+    result <- json_data[[key_name]]
+  } else {
+    # If the key_name is not found, return a message
+    result <- paste("Object '", key_name, "' not found in JSON.", sep = "")
+  }
+  print(result)
+}
+
+getJsonTables <- function(path, name) { 
+  library(jsonlite)
+  library(listviewer)
+  library(reactR)
+  
+  # Read the JSON file
+  json_data <- jsonlite::fromJSON(path)
+  # listviewer::jsonedit(json_data, width = "100%", height = "800px", mode = "tree")
+  listviewer::reactjson(
+    listdata  = json_data,
+    name = name,
+    theme = "apathy:inverted",
+    iconStyle = "triangle",
+    enableClipboard = FALSE,
+    displayObjectSize = TRUE,
+    displayDataTypes = FALSE,
+    onEdit = FALSE,
+    onAdd = FALSE,
+    onDelete = FALSE,
+    onSelect = FALSE,
+    width = "100%",
+    height = "100%"
+    )
 }
 
 createCsvGraph <- function(path, title_name, x_name, y_name, y_value, line_color) {
   library(ggplot2)
   
   data <- read.csv(path)
-  ggplot(data, aes(x = 1:nrow(data), y = !!as.name(y_value), color = line_color)) +
-    geom_line() +
-    labs(title = title_name, x = x_name, y = y_name) +
-    scale_color_manual(values = line_color) +  # Set the line color manually
-    theme(legend.position = "none")  # Remove the legend for color
+  ggplot2::ggplot(data, aes(x = 1:nrow(data), y = !!as.name(y_value), color = line_color)) +
+    ggplot2::geom_line() +
+    ggplot2::labs(title = title_name, x = x_name, y = y_name) +
+    ggplot2::scale_color_manual(values = line_color) +  # Set the line color manually
+    ggplot2::theme(legend.position = "none")  # Remove the legend for color
 }
 
 createImageGalery <- function(path) {

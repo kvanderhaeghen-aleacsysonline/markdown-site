@@ -1,0 +1,261 @@
+{
+    "inputs": {
+        "stakes": [
+            {
+                "cash": 25
+            },
+            {
+                "cash": 50
+            },
+            {
+                "cash": 100
+            },
+            {
+                "cash": 150
+            },
+            {
+                "cash": 200
+            },
+            {
+                "cash": 250
+            },
+            {
+                "cash": 500
+            },
+            {
+                "cash": 1000
+            },
+            {
+                "cash": 2500
+            },
+            {
+                "cash": 5000
+            },
+            {
+                "cash": 10000
+            }
+        ],
+        "Winlines": [1, 2, 3, 4, 5]
+    },
+    "compensatorGroups": {
+        "0": [25, 50],
+        "1": [100, 150, 200, 250],
+        "2": [500, 1000],
+        "3": [2500, 5000, 10000]
+    },
+    "rounds": {
+        "baseGame": {
+            "inRoundBonuses": ["Spinner"],
+            "dataWithBonus": {
+                "rtp": {
+                    "stakes": {
+                        "25": 96,
+                        "50": 96,
+                        "100": 96,
+                        "150": 96,
+                        "200": 96,
+                        "250": 96,
+                        "500": 96,
+                        "1000": 96,
+                        "2500": 96,
+                        "5000": 96,
+                        "10000": 96
+                    },
+                    "margins": {
+                        "1000": {
+                            "target": 96.33,
+                            "+": 21.91,
+                            "-": 33.64
+                        },
+                        "10000": {
+                            "target": 96.01,
+                            "+": 2.87,
+                            "-": 2.79
+                        },
+                        "100000": {
+                            "target": 96.003,
+                            "+": 0.23,
+                            "-": 0.21
+                        }
+                    }
+                },
+                "volatility": {
+                    "1000": {
+                        "target": 3.08,
+                        "+": 1.81,
+                        "-": 1.73
+                    },
+                    "10000": {
+                        "target": 3.16,
+                        "+": 0.52,
+                        "-": 0.53
+                    },
+                    "100000": {
+                        "target": 3.17,
+                        "+": 0.14,
+                        "-": 0.14
+                    }
+                },
+                "hitFrequency": {
+                    "margins": {
+                        "1000": {
+                            "target": 24.9,
+                            "+": 4,
+                            "-": 4
+                        },
+                        "10000": {
+                            "target": 24.9,
+                            "+": 1.24,
+                            "-": 1.27
+                        },
+                        "100000": {
+                            "target": 24.9,
+                            "+": 0.35,
+                            "-": 0.37
+                        }
+                    }
+                },
+                "resultDistribution": {
+                    "cashMultiplier": {
+                        "0": 0.7513,
+                        "2": 0.1207,
+                        "3": 0.0804,
+                        "4": 0.0365,
+                        "7": 0.0085,
+                        "12": 0.002,
+                        "20": 0.0006,
+                        "50": 0.0001,
+                        "100": 0.000007
+                    }
+                },
+                "highestWon": {
+                    "stakeMultiplier": 100,
+                    "freeSpinChanchu": 18,
+                    "freeSpinTerracotta": 25,
+                    "freeSpinDragon": 30
+                }
+            },
+            "dataWithoutBonus": {
+                "rtp": {
+                    "stakes": {
+                        "25": 63.67,
+                        "50": 63.67,
+                        "100": 63.67,
+                        "150": 63.67,
+                        "200": 63.67,
+                        "250": 63.67,
+                        "500": 63.67,
+                        "1000": 63.67,
+                        "2500": 63.67,
+                        "5000": 63.67,
+                        "10000": 63.67
+                    },
+                    "margins": {
+                        "1000": {
+                            "target": 63.67,
+                            "+": 10.93,
+                            "-": 10.97
+                        },
+                        "10000": {
+                            "target": 63.67,
+                            "+": 3.52,
+                            "-": 3.52
+                        },
+                        "100000": {
+                            "target": 63.67,
+                            "+": 0.78,
+                            "-": 0.99
+                        }
+                    }
+                },
+                "volatility": {
+                    "1000": {
+                        "target": 1.29,
+                        "+": 0.2,
+                        "-": 0.23
+                    },
+                    "10000": {
+                        "target": 1.3,
+                        "+": 0.07,
+                        "-": 0.08
+                    },
+                    "100000": {
+                        "target": 1.3,
+                        "+": 0.03,
+                        "-": 0.03
+                    }
+                },
+                "hitFrequency": {
+                    "margins": {
+                        "1000": {
+                            "target": 23.2,
+                            "+": 3.5,
+                            "-": 3.5
+                        },
+                        "10000": {
+                            "target": 23.2,
+                            "+": 1.1,
+                            "-": 1.07
+                        },
+                        "100000": {
+                            "target": 23.2,
+                            "+": 0.23,
+                            "-": 0.24
+                        }
+                    }
+                },
+                "resultDistribution": {
+                    "cashMultiplier": {
+                        "0": 0.7687,
+                        "2": 0.1185,
+                        "3": 0.0781,
+                        "4": 0.0288,
+                        "7": 0.0049,
+                        "12": 0.0008,
+                        "20": 0.0002,
+                        "50": 0.000006,
+                        "100": 0
+                    }
+                },
+                "highestWon": {
+                    "stakeMultiplier": 100
+                }
+            }
+        },
+        "freespinChanchu": {
+            "rtp": 712.01,
+            "trigger": "SpinnerReward",
+            "roundFrequency": 11.98,
+            "hitFrequency": 22.48,
+            "avgConsecutiveRounds": 0
+        },
+        "freespinTerracotta": {
+            "rtp": 1375.12,
+            "trigger": "SpinnerReward",
+            "roundFrequency": 8.18,
+            "hitFrequency": 30.06,
+            "avgConsecutiveRounds": 0
+        },
+        "freespinDragon": {
+            "rtp": 4003.71,
+            "trigger": "SpinnerReward",
+            "roundFrequency": 4.01,
+            "hitFrequency": 48.46,
+            "avgConsecutiveRounds": 0
+        }
+    },
+    "bonuses": {
+        "spinner": {
+            "triggerDescription": "Bonus winline",
+            "frequency": 1.9,
+            "wonFrequency": 100,
+            "resultDistribution": {
+                "wheelSegments": {
+                    "chanchu": 60,
+                    "terracotta": 30,
+                    "dragon": 10
+                }
+            }
+        }
+    }
+}
