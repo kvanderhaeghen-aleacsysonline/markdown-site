@@ -1,11 +1,23 @@
 ---
 title: "Key Performance Indicators"
-output: html_document
+output: 
+  html_document:
+    self_contained: false
+include: ["./.next"]
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 </br>
+
+## Graph View
+
+```{r, results='asis'}
+source("functions.R")
+getJsonGraph('./data/kpi.json')
+```
+
+## JSON View
 
 ```{r, results='asis'}
 source("functions.R")

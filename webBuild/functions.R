@@ -54,9 +54,7 @@ getJsonTables <- function(path, name) {
   library(listviewer)
   library(reactR)
   
-  # Read the JSON file
   json_data <- jsonlite::fromJSON(path)
-  # listviewer::jsonedit(json_data, width = "100%", height = "800px", mode = "tree")
   listviewer::reactjson(
     listdata  = json_data,
     name = name,
@@ -72,6 +70,32 @@ getJsonTables <- function(path, name) {
     width = "100%",
     height = "100%"
     )
+}
+
+getJsonGraph <- function(json_path) {
+  library(shiny)
+  library(jsonlite)
+  
+  json_data <- jsonlite::fromJSON(json_path)
+  json_content <- jsonlite::toJSON(json_data, pretty = TRUE)
+  
+  html_code <- "<iframe id='jsoncrackEmbed' src='https://jsoncrack.com/widget' style='width: 100%; height:750px;'></iframe>"
+  js_code <- paste0("
+    <script>
+      const jsonCrackEmbed = document.getElementById('jsoncrackEmbed');
+      const json = JSON.stringify(", json_content, ");
+      window?.addEventListener('message', (event) => {
+        jsonCrackEmbed.contentWindow.postMessage({json}, '*');
+      });
+    </script>
+  ")
+  
+  combinedCode <- paste0(html_code, js_code)
+  
+  shiny::tags$div(
+    HTML(combinedCode),
+    style = "width: 100%; height: 100%;"
+  )
 }
 
 createCsvGraph <- function(path, title_name, x_name, y_name, y_value, line_color) {
@@ -91,22 +115,22 @@ createImageGalery <- function(path) {
   image_files <- list.files(path, pattern = "\\.(jpg|jpeg|png|gif)$", full.names = TRUE)
   
   # Generate HTML code for the table dynamically
-  htmlTable <- "<table id='table-gallery' align='center' style='width: 100%; max-width: 1200px; border-collapse: collapse; border: 3px solid grey;'>"
+  html_table <- "<table id='table-gallery' align='center' style='width: 100%; max-width: 1200px; border-collapse: collapse; border: 3px solid grey;'>"
   for (i in seq_along(image_files)) {
     if ((i - 1) %% 3 == 0) {
-      htmlTable <- paste0(htmlTable, "\n<tr'>")
+      html_table <- paste0(html_table, "\n<tr'>")
     }
-    htmlTable <- paste0(
-      htmlTable,"\n<td id='cell", i, "' style='text-align: center; vertical-align: middle; border: 1px solid grey; padding: 5px;'><img src='", image_files[i], "' style='width: 260px; max-width: 100%; height: auto; cursor: pointer;' onclick='openPopup(\"", image_files[i], "\")' /></td>"
+    html_table <- paste0(
+      html_table,"\n<td id='cell", i, "' style='text-align: center; vertical-align: middle; border: 1px solid grey; padding: 5px;'><img src='", image_files[i], "' style='width: 260px; max-width: 100%; height: auto; cursor: pointer;' onclick='openPopup(\"", image_files[i], "\")' /></td>"
     )
     if (i %% 3 == 0 || i == length(image_files)) {
-      htmlTable <- paste0(htmlTable, "\n</tr>")
+      html_table <- paste0(html_table, "\n</tr>")
     }
   }
-  htmlTable <- paste0(htmlTable, "\n</table>")
+  html_table <- paste0(html_table, "\n</table>")
   
   # Create JavaScript code for opening popup
-  jsCode <- "
+  js_code <- "
     <script>
       function openPopup(imageSrc) {
         var popupWindow = window.open('', 'ImagePopup', '');
@@ -117,10 +141,10 @@ createImageGalery <- function(path) {
   "
   
   # Combine HTML and JavaScript code
-  combinedCode <- paste0(jsCode, htmlTable)
+  combined_code <- paste0(js_code, html_table)
   
   # Create Shiny tags$div with HTML code
   shiny::tags$div(
-    HTML(combinedCode)
+    HTML(combined_code)
   )
 }

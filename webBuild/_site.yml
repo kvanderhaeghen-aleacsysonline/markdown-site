@@ -9,4 +9,3 @@ output:
     theme: lumen
     includes:
       after_body: "footer.html"
-      
