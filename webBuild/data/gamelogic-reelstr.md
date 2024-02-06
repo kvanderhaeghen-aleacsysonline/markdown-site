@@ -1,5 +1,5 @@
 <aside class="alert alert-info">
-Please note that the dice strings don't make the loop yet.<br>
+Please note that the dice strings don't make the loop yet. <br>
 Brake zone is the same as normal Zone.
 </aside>
 <aside class="alert alert-warning">

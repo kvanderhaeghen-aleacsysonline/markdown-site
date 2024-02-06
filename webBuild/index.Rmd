@@ -3,34 +3,40 @@ title: ""
 output: html_document
 ---
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE) 
+library(knitr)
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, results = 'asis')
 ```
+
 </br>
 
 ![](images/logo.png)
+
 </br></br>
 
 ## Game Description
 
 ```{r child = './data/index-desc.md'}
 ```
-</br></br>
+
+</br>
 
 ## Game Type
 
 ```{r child = './data/index-type.md'}
 ```
-</br></br>
+
+</br>
 
 ## Target Audience
 
 ```{r child = './data/index-target.md'}
 ```
-</br></br>
+
+</br>
 
 ## Features & Selling Points
 
-``` {r, result='asis'}
+``` {r}
 source("functions.R")
 createCsvTable('./data/index-feat.csv')
 ```

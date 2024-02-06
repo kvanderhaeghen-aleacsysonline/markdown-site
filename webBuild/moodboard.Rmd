@@ -3,8 +3,10 @@ title: "Moodboard"
 output: html_document
 ---
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+library(knitr)
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, results = 'asis')
 ```
+
 </br>
 
 ## Gallery

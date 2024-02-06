@@ -3,19 +3,21 @@ title: "Simulations"
 output: html_document
 ---
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+library(knitr)
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, results = 'asis')
 ```
+
 </br>
 
 ## Compensator
 
 ### Round Data
-```{r, results='asis'}
+```{r}
 source("functions.R")
 createCsvGraph('./data/simulations-round-100.csv', 'Stake €1.00', "Rounds", "Compensator Value", "compensator_value", "#158CBA")
 ```
 
-```{r, results='asis'}
+```{r}
 source("functions.R")
 createCsvGraph('./data/simulations-round-100.csv', '', "Rounds", "RTP", "running_rtp", "#158CBA")
 ```

@@ -1,5 +1,5 @@
 printTxt <- function(path) { 
-  file_content = readLines(path)
+  file_content = readLines(path, warn = FALSE)
   cat(file_content, sep = "\n")
 }
 
@@ -37,6 +37,7 @@ printJson <- function(path) {
 
 getJsonData <- function(path, key_name) { 
   library(jsonlite)
+  
   json_data <- jsonlite::fromJSON(path)
   result <- ''
   if (key_name %in% names(json_data)) {

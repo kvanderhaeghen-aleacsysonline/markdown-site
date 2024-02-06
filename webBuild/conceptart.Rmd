@@ -4,12 +4,13 @@ output: html_document
 runtime: shiny
 ---
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, results = 'asis')
 ```
+
 </br>
 
 ## Gallery
-```{r, results='asis'}
+```{r}
 source("functions.R")
 createImageGalery('./images/conceptart')
 ```

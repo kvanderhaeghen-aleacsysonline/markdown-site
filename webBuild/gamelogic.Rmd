@@ -3,45 +3,53 @@ title: "Game Logic"
 output: html_document
 ---
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+library(knitr)
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, results = 'asis')
 ```
+
 </br>
 
 ## Dice String
 
 ```{r child = './data/gamelogic-dicestr.md'}
 ```
-```{r, results='asis'}
+
+
+```{r}
 source("functions.R")
 printJson('./data/gamelogic-dicestr.json')
 ```
+
 </br></br>
 
 ## Reel String [Free Spins]
 
 ```{r child = './data/gamelogic-reelstr.md'}
 ```
-```{r, results='asis'}
+
+
+```{r}
 source("functions.R")
-printJson('./data/gamelogic-reelstr.json')
+cat(printJson('./data/gamelogic-reelstr.json'))
 ```
+
 </br></br>
 
 <div style="display: flex; justify-content: space-between;">
   <div style="flex: 1;text-align: center;">## Points Table
-```{r, result='asis'}
+```{r}
 source("functions.R")
 createCsvTable('./data/gamelogic-pointstbl.csv')
 ```
   </div>
   <div style="flex: 1;text-align: center;">## Prize Table
-```{r, result='asis'}
+```{r}
 source("functions.R")
 createCsvTable('./data/gamelogic-prizetbl.csv')
 ```
   </div>
   <div style="flex: 1;text-align: center;">## Features
-```{r, result='asis'}
+```{r}
 source("functions.R")
 createCsvTable('./data/gamelogic-feattbl.csv')
 ```
